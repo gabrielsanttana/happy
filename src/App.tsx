@@ -1,9 +1,9 @@
 import React from 'react';
-import './App.css';
+import './global.module.scss';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <h1>Happy</h1>
     </div>
   );
