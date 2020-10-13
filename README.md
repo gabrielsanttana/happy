@@ -1,4 +1,4 @@
-## <div align="center"><img src="https://github.com/gabrielsanttana/happy/blob/main/happy-logo.png" /></div>
+## <div align="center"><img src="./.github/happy-logo.png" /></div>
 
 ###
 
