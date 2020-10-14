@@ -2,8 +2,77 @@
   width: 100vw;
   height: 100vh;
   background: linear-gradient(329.54deg, #29b6d1 0%, #00c7c7 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  h1 {
-    font-size: 48px;
+  .landingWrapper {
+    width: 100%;
+    height: 72%;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: url("../../assets/childrenIllustration.svg") no-repeat 80%
+      center;
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      > div {
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+
+        strong,
+        span {
+          font-size: 24px;
+          line-height: 34px;
+        }
+      }
+    }
+
+    main {
+      h1 {
+        font-size: 4.5rem;
+        max-width: 394px;
+        line-height: 60px;
+        font-weight: 800;
+        margin-top: 70px;
+      }
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      p {
+        max-width: 320px;
+        font-size: 24px;
+        line-height: 34px;
+      }
+
+      a {
+        background-color: #ffd666;
+        width: 80px;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 35%;
+        transition: background-color 0.4s;
+
+        &:hover {
+          background-color: #96feff;
+
+          svg {
+            color: red;
+          }
+        }
+      }
+    }
   }
 }
