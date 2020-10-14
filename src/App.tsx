@@ -1,12 +1,9 @@
 import React from 'react';
+import Router from './routes';
 import './global.module.scss';
 
 function App() {
-  return (
-    <div>
-      <h1>Happy</h1>
-    </div>
-  );
+  return <Router />;
 }
 
 export default App;
