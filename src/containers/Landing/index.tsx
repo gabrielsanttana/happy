@@ -24,7 +24,7 @@ const Landing: React.FC = () => {
         <footer>
           <p>Visite orfanatos e mude o dia de muitas crianças.</p>
 
-          <Link to="/">
+          <Link to="/orfanatos">
             <FaArrowRight color="#8D734B" size={24} />
           </Link>
         </footer>
