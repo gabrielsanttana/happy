@@ -2,7 +2,7 @@ import React from 'react';
 import Router from './routes';
 import './global.module.scss';
 
-function App() {
+const App: React.FC = () => {
   return <Router />;
 }
 
