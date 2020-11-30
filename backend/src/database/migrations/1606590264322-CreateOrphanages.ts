@@ -39,8 +39,13 @@ export class CreateOrphanages1606590264322 implements MigrationInterface {
             type: 'varchar',
           },
           {
-            name: 'open',
+            name: 'opening_hours',
             type: 'varchar',
+          },
+          {
+            name: 'open_on_weekends',
+            type: 'boolean',
+            default: false,
           },
         ],
       }),
