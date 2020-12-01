@@ -14,6 +14,12 @@ export default {
       open_on_weekends,
     } = request.body;
 
+    const files = request.files as Express.Multer.File[];
+
+    const images = files.map((image) => ({
+      path: image.filename,
+    }));
+
     const orphanagesRepository = getRepository(Orphanage);
 
     const newOrphanage = orphanagesRepository.create({
@@ -24,6 +30,7 @@ export default {
       instructions,
       opening_hours,
       open_on_weekends,
+      images,
     });
 
     await orphanagesRepository.save(newOrphanage);
@@ -36,7 +43,9 @@ export default {
   async getAllOrphanages(request: Request, response: Response) {
     const orphanagesRepository = getRepository(Orphanage);
 
-    const orphanagesList = await orphanagesRepository.find();
+    const orphanagesList = await orphanagesRepository.find({
+      relations: ['images'],
+    });
 
     return response.status(200).json(orphanagesList);
   },
@@ -46,7 +55,9 @@ export default {
 
     const orphanagesRepository = getRepository(Orphanage);
 
-    const orphanage = await orphanagesRepository.findOneOrFail(id);
+    const orphanage = await orphanagesRepository.findOneOrFail(id, {
+      relations: ['images'],
+    });
 
     return response.status(200).json(orphanage);
   },
