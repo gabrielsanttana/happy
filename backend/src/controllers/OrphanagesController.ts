@@ -1,6 +1,7 @@
 import {getRepository} from 'typeorm';
 import {Request, Response} from 'express';
 import Orphanage from '../models/Orphanage';
+import orphanagesView from '../views/orphanagesView';
 
 export default {
   async createOrphanage(request: Request, response: Response) {
@@ -37,7 +38,7 @@ export default {
 
     return response
       .status(201)
-      .json({message: 'Successfully created the orphanage!'});
+      .json({message: 'Orphanage successfully created!'});
   },
 
   async getAllOrphanages(request: Request, response: Response) {
@@ -47,7 +48,7 @@ export default {
       relations: ['images'],
     });
 
-    return response.status(200).json(orphanagesList);
+    return response.status(200).json(orphanagesView.renderMany(orphanagesList));
   },
 
   async getOrphanageById(request: Request, response: Response) {
@@ -59,6 +60,6 @@ export default {
       relations: ['images'],
     });
 
-    return response.status(200).json(orphanage);
+    return response.status(200).json(orphanagesView.render(orphanage));
   },
 };
