@@ -1,6 +1,7 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {Text, TouchableOpacity, View} from 'react-native';
 import MapView, {Callout, Marker, PROVIDER_GOOGLE} from 'react-native-maps';
+import {Feather} from '@expo/vector-icons';
 import mapMarkerIcon from '../../assets/Local.png';
 import styles from './styles';
 
@@ -35,6 +36,17 @@ const OrphanagesMap: React.FC = () => {
           </Callout>
         </Marker>
       </MapView>
+
+      <View style={styles.footer}>
+        <Text style={styles.footerText}>2 orfanatos encontrados</Text>
+
+        <TouchableOpacity
+          style={styles.createOrphanageButton}
+          onPress={() => {}}
+        >
+          <Feather name="plus" color="#fff" />
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };

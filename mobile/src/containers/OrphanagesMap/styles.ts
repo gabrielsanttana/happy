@@ -24,6 +24,34 @@ const styles = StyleSheet.create({
     color: '#0089a5',
     fontSize: 14,
   },
+
+  footer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    position: 'absolute',
+    left: 24,
+    right: 24,
+    bottom: 32,
+    backgroundColor: '#fff',
+    borderRadius: 20,
+    height: 56,
+    paddingLeft: 24,
+    elevation: 3,
+  },
+
+  footerText: {
+    color: '#8fa7b3',
+  },
+
+  createOrphanageButton: {
+    width: 56,
+    height: 56,
+    backgroundColor: '#15c3d6',
+    borderRadius: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
 });
 
 export default styles;
