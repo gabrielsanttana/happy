@@ -4,8 +4,15 @@ import MapView, {Callout, Marker, PROVIDER_GOOGLE} from 'react-native-maps';
 import {Feather} from '@expo/vector-icons';
 import mapMarkerIcon from '../../assets/Local.png';
 import styles from './styles';
+import {useNavigation} from '@react-navigation/native';
 
 const OrphanagesMap: React.FC = () => {
+  const navigator = useNavigation();
+
+  const goToOrphanageDetailsPage = () => {
+    navigator.navigate('OrphanageDetails');
+  };
+
   return (
     <View style={styles.container}>
       <MapView
@@ -29,7 +36,7 @@ const OrphanagesMap: React.FC = () => {
             longitude: -47.3434936,
           }}
         >
-          <Callout tooltip onPress={() => {}}>
+          <Callout tooltip onPress={goToOrphanageDetailsPage}>
             <View style={styles.calloutContainer}>
               <Text style={styles.calloutText}>Orfanato</Text>
             </View>
