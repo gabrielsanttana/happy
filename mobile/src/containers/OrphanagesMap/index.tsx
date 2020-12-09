@@ -44,7 +44,7 @@ const OrphanagesMap: React.FC = () => {
           style={styles.createOrphanageButton}
           onPress={() => {}}
         >
-          <Feather name="plus" color="#fff" />
+          <Feather name="plus" color="#fff" size={22} />
         </TouchableOpacity>
       </View>
     </View>
