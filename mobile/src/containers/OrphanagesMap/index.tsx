@@ -14,6 +14,10 @@ const OrphanagesMap: React.FC = () => {
     navigator.navigate('OrphanageDetails');
   };
 
+  const goToSelectMapPositionPage = () => {
+    navigator.navigate('SelectMapPosition');
+  };
+
   return (
     <View style={styles.container}>
       <MapView
@@ -48,7 +52,10 @@ const OrphanagesMap: React.FC = () => {
       <View style={styles.footer}>
         <Text style={styles.footerText}>2 orfanatos encontrados</Text>
 
-        <RectButton style={styles.createOrphanageButton} onPress={() => {}}>
+        <RectButton
+          style={styles.createOrphanageButton}
+          onPress={goToSelectMapPositionPage}
+        >
           <Feather name="plus" color="#fff" size={22} />
         </RectButton>
       </View>
