@@ -90,6 +90,13 @@ const styles = StyleSheet.create({
     borderRadius: 20,
   },
 
+  scheduleItemRed: {
+    backgroundColor: '#FEF6F9',
+    borderWidth: 1,
+    borderColor: '#FFBCD4',
+    borderRadius: 20,
+  },
+
   scheduleText: {
     fontFamily: 'Nunito_600SemiBold',
     fontSize: 16,
@@ -103,6 +110,10 @@ const styles = StyleSheet.create({
 
   scheduleTextGreen: {
     color: '#37C77F',
+  },
+
+  scheduleTextRed: {
+    color: '#FF669D',
   },
 
   contactButton: {
